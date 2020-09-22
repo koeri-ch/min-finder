@@ -4,7 +4,7 @@ This little project had the objective to find the negative pulses in a signal. I
 
 ## The algorithm
 
-This function is based on SciPy Signal's peak-finding function. This min-finder function works by taking samples of a waveform and, as it moves forward along it, compares the current sample to all the following ones, until it realizes that the ahead sample is different than the current. When that is true, it will also compare the current sample to the previous one and then determine whether it falls into the category of a minimum or not. However, while SciPy's function is much more robust and complete, min-finder only cares about the pulse height; it will firstly find the regions of the waveform that are below a certain threshold and apply the minimum-finding algorithm that such regions. This has the advantage to apply this time-consuming task only to a small size of the waveform, hence achieving faster performance.
+This function is based on SciPy Signal's peak-finding function. It works by taking samples of a waveform and, as it moves forward along, compares the current sample to all the following ones, until it realizes that the ahead sample is different than the current. When that is true, it will also compare the current sample to the previous one and then determine whether it falls into the category of a local minimum or not. However, while SciPy's function is much more robust and complete, min-finder only cares about the pulse height; it will firstly find the regions of the waveform that are below a certain threshold and apply the minimum-finding algorithm that such regions. This has the advantage of applying the algorithm only to a small size of the waveform, hence achieving faster performance.
 
 ## How to use it
 
