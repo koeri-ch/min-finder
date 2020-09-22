@@ -2,9 +2,9 @@
 
 This little project had the objective to find the negative pulses in a signal. It finds the minima that are below a certain threshold, being very fast on that. It is based on SciPy's peak-finding function, but it is different in two ways: it finds minima instead of maxima; and only applies the pulse-finding algorithm in parts of the waveform that are smaller than a threshold. The latter is responsible for making this function really fast, as it only applies the minimun-finding algorithm in the regions of the waveform which most likely contain the pulse we want. 
 
-## The algorithm
+## How it works
 
-This function is based on SciPy Signal's peak-finding function. It works by taking samples of a waveform and, as it moves forward along, compares the current sample to all the following ones, until it realizes that the ahead sample is different than the current. When that is true, it will also compare the current sample to the previous one and then determine whether it falls into the category of a local minimum or not. However, while SciPy's function is much more robust and complete, min-finder only cares about the pulse height; it will firstly find the regions of the waveform that are below a certain threshold and apply the minimum-finding algorithm that such regions. This has the advantage of applying the algorithm only to a small size of the waveform, hence achieving faster performance.
+This function is based on SciPy Signal's peak-finding function, but tweaked to find minima instead of maxima. It works by taking samples of a waveform and, as it moves forward along the waveform samples, compares the current one to all the succeding samples. When the first different succeding sample is found, it will compare the current sample with that one ahead and with the one immediately before, classifying the current sample as a minimum or not. However, while SciPy's function is much more robust and complete, min-finder only cares about the pulse height; it will firstly find the regions of the waveform that are below a certain threshold and apply the minimum-finding algorithm that such regions. This has the advantage of applying the algorithm only to a small size of the waveform, hence achieving faster performance.
 
 ## How to use it
 
