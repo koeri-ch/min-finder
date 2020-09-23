@@ -36,7 +36,7 @@ void min_finder(std::vector<float> y, float threshold) {
                 // Find midpoint between ahead and before, 
                 // or close to it. This will useful if the 
                 // minimun is a plateau.
-                int k = floor((i_ahead + i_behind)/2);
+                int k = floor((i_ahead + i_behind)/2.0);
                 extrema.push_back(k);
             }
         }
