@@ -12,4 +12,4 @@ A vector containing the waveform should be passed to the min-finder function, al
 
 ## References
 
-Please refer to the [SciPy's documentation](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.find_peaks.html) and [source code](https://github.com/scipy/scipy/blob/master/scipy/signal/_peak_finding.py).
+Please refer to the SciPy's [documentation](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.find_peaks.html) and [source code](https://github.com/scipy/scipy/blob/master/scipy/signal/_peak_finding.py).
