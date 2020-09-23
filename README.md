@@ -10,6 +10,8 @@ This function is based on SciPy Signal's peak-finding function, but tweaked to f
 
 A vector containing the waveform should be passed to the min-finder function, along with a scalar value for the treshold. The function will return a vector containing the indices of the waveform vector which represent the minima.
 
+The two folder, named *cpp* and *python*, will contain the function for each of the languages, respectively. 
+
 ## References
 
 Please refer to the SciPy's [documentation](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.find_peaks.html) and [source code](https://github.com/scipy/scipy/blob/master/scipy/signal/_peak_finding.py).
