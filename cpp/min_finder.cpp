@@ -1,4 +1,4 @@
-void min_finder(std::vector<float> hwaveform, float threshold) {
+void min_finder(std::vector<float> y, float threshold) {
 
     // extrema will contain the indices of 
     // the waveform vector that contain a minimum.
@@ -6,7 +6,7 @@ void min_finder(std::vector<float> hwaveform, float threshold) {
 
     // N is the number of samples in
     // the waveform vector.
-    int N = hwaveform.size();
+    int N = y.size();
 
     // We start at one sample after the 
     // beginning of the waveform.
@@ -20,18 +20,18 @@ void min_finder(std::vector<float> hwaveform, float threshold) {
 
         // Compare the current sample to the threshold
         // before determining the minima. This saves time.
-        if (hwaveform[i] < threshold) {
+        if (y[i] < threshold) {
 
             // Compare the current sample to all the following
             // and keep going, unless the ahead sample is different
             // than the current sample.
-            while (hwaveform[i_ahead] == hwaveform[i] && i_ahead < N-1) {
+            while (y[i_ahead] == y[i] && i_ahead < N-1) {
                 i_ahead++;
             }
 
             // Compare the sample ahead to the one before 
             // to find out if the current sample is a minimum.
-            if (hwaveform[i_ahead]>hwaveform[i] && hwaveform[i_behind]>hwaveform[i] ) {
+            if (y[i_ahead]>y[i] && y[i_behind]>y[i] ) {
     
                 // Find midpoint between ahead and before, 
                 // or close to it. This will useful if the 
